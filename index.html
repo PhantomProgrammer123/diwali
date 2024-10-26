@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HAPPY DIWALI</title>
+    <link rel="icon" href="favicon.png" style="border-radius: 5px;">
+    <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" rel="stylesheet" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer">
+</head>
+<body class="text-white">
+    <section class="text-gray-400 body-font">
+        <div class="container mx-auto flex px-5 py-24 items-center justify-center flex-col">
+          <!-- <img src="main.png" class="lg:w-2/6 md:w-3/6 w-5/6 mb-10 object-cover object-center rounded" alt="hero"> -->
+          <div class="text-center lg:w-2/3 w-full">
+            <h1 class="main inline-flex text-white border-0 py-1 px-4 focus:outline-none rounded text-lg title-font sm:text-4xl text-3xl mb-4 font-medium text-white">!! HAPPY DIWALI !!</h1><br>
+            <p class="maina inline-flex text-white border-0 py-1 px-2 focus:outline-none rounded text-lg sm:text-1xl text-1xl mb-4 text-white leading-relaxed mb-8">When life gives you colors, make a rangoli and celebrate Diwali.</p>
+            <div class="flex justify-center">
+              <button onclick="playaudio()" style="background-color: #6868686e;" class="b inline-flex text-white border-0 py-2 px-6 focus:outline-none text-lg"><i class="fa-solid fa-play"></i></button>
+              <button onclick="stopaudio()" style="background-color: #6868686e;" class="b ml-4 inline-flex text-white border-0 py-2 px-6 focus:outline-none text-lg"><i class="fa-solid fa-pause"></i></button>
+            </div>
+          </div>
+        </div>
+      </section>
+      <style>
+        @import url('https://fonts.googleapis.com/css2?family=Eagle+Lake&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
+        body { 
+          /* background: url("background.png") no-repeat center bottom/cover; */
+          height: 100vh;
+          width: auto;
+        }
+        .main{
+          font-family: "Eagle Lake", sans-serif;
+          font-size: 77px;
+          text-shadow: 0 0 5px #ffa500, 0 0 15px #ffa500, 0 0 20px #ffa500, 0 0 40px #ffa500, 0 0 60px #ff0000, 0 0 10px #ff8d00, 0 0 98px #ff0000;
+          color: #fff6a9;
+        }
+        .b{
+          text-shadow: 0 0 5px #ffa500, 0 0 15px #ffa500, 0 0 20px #ffa500, 0 0 40px #ffa500, 0 0 60px #ff0000, 0 0 10px #ff8d00, 0 0 98px #ff0000;
+          color: #fff6a9;
+          border-radius: 10cm;
+        }
+        .maina{
+          font-family: "Great Vibes", sans-serif;
+          font-size: 30px;
+        }
+        @media (min-width: 601px) {
+  body {
+    background: url('background.png') no-repeat center bottom/cover;
+  }
+}
+
+@media (max-width: 600px) {
+  body {      
+     background: url('background (1).png')no-repeat center bottom/cover;
+     overflow: hidden;
+  }
+  .main{
+    font-size: 50px;
+  }
+}
+
+      </style>
+      <audio controls autoplay loop hidden id="Diwali">
+        <source src="jhethalal happy diwali.mp3">
+      </audio>
+      <script>
+		var a = document.getElementById("Diwali");
+		function playaudio() {
+			a.play();
+		}
+
+		function stopaudio() {
+			a.pause();
+			a.currentTime = 0;
+		}
+	</script>
+
+</body>
+</html>
